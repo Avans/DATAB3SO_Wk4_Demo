@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="99e6dd9d27b349d3829de565d9c42b12" Name="Diagram1" ZoomLevel="64">
+        <EntityTypeShape EntityType="WideWorldImportersModel.City" Width="1.5" PointX="3.75" PointY="25.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="WideWorldImportersModel.Country" Width="1.5" PointX="1.5" PointY="29.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="WideWorldImportersModel.DeliveryMethod" Width="1.5" PointX="0.75" PointY="20.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="WideWorldImportersModel.PaymentMethod" Width="1.5" PointX="9" PointY="26.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="WideWorldImportersModel.StateProvince" Width="1.5" PointX="1.5" PointY="25.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="WideWorldImportersModel.TransactionType" Width="1.5" PointX="9" PointY="29.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="WideWorldImportersModel.PurchaseOrderLine" Width="1.5" PointX="5.25" PointY="14.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="WideWorldImportersModel.PurchaseOrder" Width="1.5" PointX="3" PointY="20.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="WideWorldImportersModel.Supplier" Width="1.5" PointX="6" PointY="18.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="WideWorldImportersModel.SupplierTransaction" Width="1.5" PointX="11.25" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WideWorldImportersModel.Customer" Width="1.5" PointX="9" PointY="18.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="WideWorldImportersModel.CustomerTransaction" Width="1.5" PointX="11.25" PointY="24.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="WideWorldImportersModel.InvoiceLine" Width="1.5" PointX="16.75" PointY="19.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="WideWorldImportersModel.Invoice" Width="1.5" PointX="13.5" PointY="24.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="WideWorldImportersModel.OrderLine" Width="1.5" PointX="16.5" PointY="23.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="WideWorldImportersModel.Order" Width="1.5" PointX="11.25" PointY="31.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="WideWorldImportersModel.Color" Width="1.5" PointX="9" PointY="14.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="WideWorldImportersModel.PackageType" Width="1.5" PointX="3" PointY="13.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="WideWorldImportersModel.StockItem" Width="1.5" PointX="11.25" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="WideWorldImportersModel.StockItemTransaction" Width="1.5" PointX="14.25" PointY="20" IsExpanded="true" />
+        <AssociationConnector Association="WideWorldImportersModel.FK_Application_Cities_StateProvinceID_Application_StateProvinces" ManuallyRouted="false" />
+        <AssociationConnector Association="WideWorldImportersModel.FK_Purchasing_Suppliers_DeliveryCityID_Application_Cities" ManuallyRouted="false" />
+        <AssociationConnector Association="WideWorldImportersModel.FK_Purchasing_Suppliers_PostalCityID_Application_Cities" ManuallyRouted="false" />
+        <AssociationConnector Association="WideWorldImportersModel.FK_Sales_Customers_DeliveryCityID_Application_Cities" ManuallyRouted="false" />
+        <AssociationConnector Association="WideWorldImportersModel.FK_Sales_Customers_PostalCityID_Application_Cities" ManuallyRouted="false" />
+        <AssociationConnector Association="WideWorldImportersModel.FK_Application_StateProvinces_CountryID_Application_Countries" ManuallyRouted="false" />
+        <AssociationConnector Association="WideWorldImportersModel.FK_Purchasing_PurchaseOrders_DeliveryMethodID_Application_DeliveryMethods" ManuallyRouted="false" />
+        <AssociationConnector Association="WideWorldImportersModel.FK_Purchasing_Suppliers_DeliveryMethodID_Application_DeliveryMethods" ManuallyRouted="false" />
+        <AssociationConnector Association="WideWorldImportersModel.FK_Sales_Customers_DeliveryMethodID_Application_DeliveryMethods" ManuallyRouted="false" />
+        <AssociationConnector Association="WideWorldImportersModel.FK_Sales_Invoices_DeliveryMethodID_Application_DeliveryMethods" ManuallyRouted="false" />
+        <AssociationConnector Association="WideWorldImportersModel.FK_Purchasing_SupplierTransactions_PaymentMethodID_Application_PaymentMethods" ManuallyRouted="false" />
+        <AssociationConnector Association="WideWorldImportersModel.FK_Sales_CustomerTransactions_PaymentMethodID_Application_PaymentMethods" ManuallyRouted="false" />
+        <AssociationConnector Association="WideWorldImportersModel.FK_Purchasing_SupplierTransactions_TransactionTypeID_Application_TransactionTypes" ManuallyRouted="false" />
+        <AssociationConnector Association="WideWorldImportersModel.FK_Sales_CustomerTransactions_TransactionTypeID_Application_TransactionTypes" ManuallyRouted="false" />
+        <AssociationConnector Association="WideWorldImportersModel.FK_Warehouse_StockItemTransactions_TransactionTypeID_Application_TransactionTypes" ManuallyRouted="false" />
+        <AssociationConnector Association="WideWorldImportersModel.FK_Purchasing_PurchaseOrderLines_PackageTypeID_Warehouse_PackageTypes" ManuallyRouted="false" />
+        <AssociationConnector Association="WideWorldImportersModel.FK_Purchasing_PurchaseOrderLines_PurchaseOrderID_Purchasing_PurchaseOrders" ManuallyRouted="false" />
+        <AssociationConnector Association="WideWorldImportersModel.FK_Purchasing_PurchaseOrderLines_StockItemID_Warehouse_StockItems" ManuallyRouted="false" />
+        <AssociationConnector Association="WideWorldImportersModel.FK_Purchasing_PurchaseOrders_SupplierID_Purchasing_Suppliers" ManuallyRouted="false" />
+        <AssociationConnector Association="WideWorldImportersModel.FK_Purchasing_SupplierTransactions_PurchaseOrderID_Purchasing_PurchaseOrders" ManuallyRouted="false" />
+        <AssociationConnector Association="WideWorldImportersModel.FK_Warehouse_StockItemTransactions_PurchaseOrderID_Purchasing_PurchaseOrders" ManuallyRouted="false" />
+        <AssociationConnector Association="WideWorldImportersModel.FK_Purchasing_SupplierTransactions_SupplierID_Purchasing_Suppliers" ManuallyRouted="false" />
+        <AssociationConnector Association="WideWorldImportersModel.FK_Warehouse_StockItems_SupplierID_Purchasing_Suppliers" ManuallyRouted="false" />
+        <AssociationConnector Association="WideWorldImportersModel.FK_Warehouse_StockItemTransactions_SupplierID_Purchasing_Suppliers" ManuallyRouted="false" />
+        <AssociationConnector Association="WideWorldImportersModel.FK_Sales_Customers_BillToCustomerID_Sales_Customers" ManuallyRouted="false" />
+        <AssociationConnector Association="WideWorldImportersModel.FK_Sales_CustomerTransactions_CustomerID_Sales_Customers" ManuallyRouted="false" />
+        <AssociationConnector Association="WideWorldImportersModel.FK_Sales_Invoices_BillToCustomerID_Sales_Customers" ManuallyRouted="false" />
+        <AssociationConnector Association="WideWorldImportersModel.FK_Sales_Invoices_CustomerID_Sales_Customers" ManuallyRouted="false" />
+        <AssociationConnector Association="WideWorldImportersModel.FK_Sales_Orders_CustomerID_Sales_Customers" ManuallyRouted="false" />
+        <AssociationConnector Association="WideWorldImportersModel.FK_Warehouse_StockItemTransactions_CustomerID_Sales_Customers" ManuallyRouted="false" />
+        <AssociationConnector Association="WideWorldImportersModel.FK_Sales_CustomerTransactions_InvoiceID_Sales_Invoices" ManuallyRouted="false" />
+        <AssociationConnector Association="WideWorldImportersModel.FK_Sales_InvoiceLines_InvoiceID_Sales_Invoices" ManuallyRouted="false" />
+        <AssociationConnector Association="WideWorldImportersModel.FK_Sales_InvoiceLines_PackageTypeID_Warehouse_PackageTypes" ManuallyRouted="false" />
+        <AssociationConnector Association="WideWorldImportersModel.FK_Sales_InvoiceLines_StockItemID_Warehouse_StockItems" ManuallyRouted="false" />
+        <AssociationConnector Association="WideWorldImportersModel.FK_Sales_Invoices_OrderID_Sales_Orders" ManuallyRouted="false" />
+        <AssociationConnector Association="WideWorldImportersModel.FK_Warehouse_StockItemTransactions_InvoiceID_Sales_Invoices" ManuallyRouted="false" />
+        <AssociationConnector Association="WideWorldImportersModel.FK_Sales_OrderLines_OrderID_Sales_Orders" ManuallyRouted="false" />
+        <AssociationConnector Association="WideWorldImportersModel.FK_Sales_OrderLines_PackageTypeID_Warehouse_PackageTypes" ManuallyRouted="false" />
+        <AssociationConnector Association="WideWorldImportersModel.FK_Sales_OrderLines_StockItemID_Warehouse_StockItems" ManuallyRouted="false" />
+        <AssociationConnector Association="WideWorldImportersModel.FK_Sales_Orders_BackorderOrderID_Sales_Orders" ManuallyRouted="false" />
+        <AssociationConnector Association="WideWorldImportersModel.FK_Warehouse_StockItems_ColorID_Warehouse_Colors" ManuallyRouted="false" />
+        <AssociationConnector Association="WideWorldImportersModel.FK_Warehouse_StockItems_OuterPackageID_Warehouse_PackageTypes" ManuallyRouted="false" />
+        <AssociationConnector Association="WideWorldImportersModel.FK_Warehouse_StockItems_UnitPackageID_Warehouse_PackageTypes" ManuallyRouted="false" />
+        <AssociationConnector Association="WideWorldImportersModel.FK_Warehouse_StockItemTransactions_StockItemID_Warehouse_StockItems" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
