@@ -17,9 +17,9 @@ namespace DATAB3SO_WK4_Demo
             SqlServerTypes.Utilities.LoadNativeAssemblies(AppDomain.CurrentDomain.BaseDirectory);
             SqlProviderServices.SqlServerTypesAssemblyName = "Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91";
 
-            //ComplexQuery();
+            ComplexQuery();
             //NaiveReporting();
-            NaiveReportingBetter();
+            //NaiveReportingBetter();
 
             Console.ReadLine();
         }
